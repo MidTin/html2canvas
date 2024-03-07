@@ -97,6 +97,7 @@ export class Cache {
             if (isInlineBase64Image(src) || useCORS) {
                 img.crossOrigin = 'anonymous';
             }
+            img.referrerpolicy = 'no-referrer';
             img.src = src;
             if (img.complete === true) {
                 // Inline XML images may fail to parse, throwing an Error later on
