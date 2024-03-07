@@ -1,5 +1,5 @@
-import {FEATURES} from './features';
 import {Context} from './context';
+import {FEATURES} from './features';
 
 export class CacheStorage {
     private static _link?: HTMLAnchorElement;
@@ -97,7 +97,7 @@ export class Cache {
             if (isInlineBase64Image(src) || useCORS) {
                 img.crossOrigin = 'anonymous';
             }
-            img.referrerpolicy = 'no-referrer';
+            img.referrerPolicy = 'no-referrer';
             img.src = src;
             if (img.complete === true) {
                 // Inline XML images may fail to parse, throwing an Error later on
